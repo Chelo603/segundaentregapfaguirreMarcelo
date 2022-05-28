@@ -1,0 +1,131 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>Carta Sur</title>
+  </head>
+  <header>
+    <img
+      src="./imagenes/CartaSur_138x58.jpg"
+      alt="envio"
+      width="60"
+      height="50"
+    />
+    <h1>Obtené tu préstamo más rápido y fácil</h1>
+  </header>
+  <body>
+    <fieldset style="margin-bottom: 15px">
+      <div id="contenedor">
+        <div class="header">
+          <legend>Ingrese los datos aquí</legend>
+        </div>
+        <div class="control">
+          <label for="nombre"
+          >Nombre:<br />
+          <input
+            type="nombre"
+            name="nombre"
+            id="nombre"
+            placeholder="nombre"
+            min="500"
+            step="500"
+        /></label>
+        </div>
+        <div name="frmPrestamo" id="frmPrestamo" min="1" style="width: 60%">
+          <div class="control">
+            <label for="fecha"
+              >Fecha: <br />
+              <input type="date" name="fecha" id="fecha" placeholder="fecha"
+            /></label>
+          </div>
+          <div class="control">
+            <label for="monto"
+              >Monto:<br />
+              <input
+                type="number"
+                name="monto"
+                id="monto"
+                placeholder="monto"
+                min="500"
+                step="500"
+            /></label>
+          </div>
+          <div class="control">
+            <label for="periodo"
+              >Periodo de pago:<br />
+              <select name="periodo" id="periodo">
+                <option value="semanal">semanal</option>
+                <option value="quincenal">quincenal</option>
+                <option value="mensual">mensual</option>
+              </select>
+            </label>
+          </div>
+          <div class="control">
+            <label for="interes"
+              >Interés (anual):<br />
+              <input
+                type="number"
+                name="interes"
+                id="interes"
+                placeholder="interés"
+                min="0.1"
+                style="width: 10%"
+            /></label>
+          </div>
+          <div class="control">
+            <label for="plazo"
+              >Plazo:
+              <div class="radios">
+                <label for="mensual" class="radioContenedor"
+                  >Mensual
+                  <input
+                    type="radio"
+                    name="tipoPlazo"
+                    id="mensual"
+                    value="mensual"
+                  />
+                  <span class="circle"></span>
+                </label>
+                <label for="anual" class="radioContenedor"
+                  >Anual
+                  <input
+                    type="radio"
+                    name="tipoPlazo"
+                    id="anual"
+                    value="anual"
+                  />
+                  <span class="circle"></span>
+                </label>
+              </div>
+              <input
+                type="number"
+                name="plazo"
+                id="plazo"
+                min="1"
+                max="12"
+                step="1"
+              />
+            </label>
+          </div>
+          <br />
+          <button id="simular" onclick="simularPrestamo()">
+            Simular préstamo
+          </button>
+        </div>
+      </div>
+    </fieldset>
+    <div id="contenedorTabla">
+      <div  id="apodo"></div>
+
+      </div>
+
+      <div id="amortizaciones"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
